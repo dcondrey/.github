@@ -1,0 +1,41 @@
+name: Reusable Rust CI
+
+on:
+  workflow_call:
+    inputs:
+      manifest-path:
+        description: Path to Cargo.toml, for repos where the crate isn't at the root
+        required: false
+        type: string
+        default: Cargo.toml
+      extra-test-args:
+        description: Extra arguments appended to `cargo test`
+        required: false
+        type: string
+        default: ""
+
+jobs:
+  lint:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+
+      - uses: dtolnay/rust-toolchain@stable
+        with:
+          components: rustfmt, clippy
+
+      - uses: Swatinem/rust-cache@v2
+
+      - run: cargo fmt --manifest-path ${{ inputs.manifest-path }} -- --check
+      - run: cargo clippy --manifest-path ${{ inputs.manifest-path }} --all-targets -- -D warnings
+
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+
+      - uses: dtolnay/rust-toolchain@stable
+
+      - uses: Swatinem/rust-cache@v2
+
+      - run: cargo test --manifest-path ${{ inputs.manifest-path }} ${{ inputs.extra-test-args }}

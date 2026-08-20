@@ -1,0 +1,25 @@
+name: Reusable Python CI
+
+on:
+  workflow_call:
+    inputs:
+      python-version:
+        required: false
+        type: string
+        default: "3.12"
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+
+      - uses: astral-sh/setup-uv@v10
+        with:
+          python-version: ${{ inputs.python-version }}
+
+      - run: uv sync
+
+      - run: uv run ruff check .
+
+      - run: uv run pytest -q
