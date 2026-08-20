@@ -1,0 +1,74 @@
+name: Bug report
+description: Report a problem
+title: "[Bug]: "
+labels: ["bug"]
+body:
+  - type: checkboxes
+    id: preflight
+    attributes:
+      label: Preflight
+      options:
+        - label: I searched existing issues and didn't find a duplicate
+          required: true
+
+  - type: textarea
+    id: description
+    attributes:
+      label: What happened?
+      description: A clear description of the bug.
+    validations:
+      required: true
+
+  - type: textarea
+    id: repro
+    attributes:
+      label: Steps to reproduce
+      placeholder: |
+        1.
+        2.
+        3.
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected behavior
+    validations:
+      required: true
+
+  - type: dropdown
+    id: severity
+    attributes:
+      label: Severity
+      options:
+        - Low — cosmetic or minor inconvenience
+        - Medium — impacts normal use, has a workaround
+        - High — impacts normal use, no workaround
+        - Critical — data loss, crash, or security issue
+      default: 1
+    validations:
+      required: false
+
+  - type: input
+    id: environment
+    attributes:
+      label: Environment
+      placeholder: "OS, version, etc."
+    validations:
+      required: false
+
+  - type: upload
+    id: attachments
+    attributes:
+      label: Screenshots or logs
+      description: Drag and drop, or click to add files.
+    validations:
+      required: false
+
+  - type: textarea
+    id: context
+    attributes:
+      label: Additional context
+    validations:
+      required: false
