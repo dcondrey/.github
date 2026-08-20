@@ -16,10 +16,11 @@ See [GitHub's docs on default community health files](https://docs.github.com/en
 
 ## Repo scaffold defaults
 
-GitHub does **not** auto-inherit `.gitignore`, `.editorconfig`, or `.gitattributes` the way it does the files above. These live at the repo root instead, for use via [template repository](https://docs.github.com/en/repositories/creating-and-managing-repositories/creating-a-repository-from-a-template) scaffolding:
+GitHub does **not** auto-inherit `.gitignore`, `.editorconfig`, `.gitattributes`, or `.github/dependabot.yml` the way it does the files above. These live at the same paths a new repo would need them, for use via [template repository](https://docs.github.com/en/repositories/creating-and-managing-repositories/creating-a-repository-from-a-template) scaffolding:
 
 - [`.gitignore`](.gitignore)
 - [`.editorconfig`](.editorconfig)
 - [`.gitattributes`](.gitattributes)
+- [`.github/dependabot.yml`](.github/dependabot.yml) — `github-actions` enabled by default; uncomment other ecosystems as needed per repo
 
 Once this repo is marked as a template, new repos can be created from it directly: `gh repo create my-new-repo --template dcondrey/.github --public`.
