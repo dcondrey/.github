@@ -1,14 +1,18 @@
 <!-- repo-header:start -->
-<img src="https://github.com/dcondrey.png?size=160" alt=".github logo" width="120" align="left">
+<h3 align="center">.github</h3>
 
-<h1>.github</h1>
+<p align="center"><strong>Project documentation and resources for .github.</strong></p>
 
-<p><strong>Project documentation and resources for .github.</strong></p>
-
-<br clear="left">
-
-[![CI](https://img.shields.io/github/actions/workflow/status/dcondrey/.github/node-ci.yml?style=flat-square&labelColor=20232a&branch=main&label=CI)](https://github.com/dcondrey/.github/actions/workflows/node-ci.yml) [![CodeQL](https://img.shields.io/github/actions/workflow/status/dcondrey/.github/codeql.yml?style=flat-square&labelColor=20232a&branch=main&label=CodeQL)](https://github.com/dcondrey/.github/actions/workflows/codeql.yml) [![Best Practices Evidence](https://img.shields.io/badge/best%20practices-evidence%20reviewed-6a4c93?style=flat-square&labelColor=20232a)](.bestpractices.json) [![Code of Conduct](https://img.shields.io/badge/code%20of%20conduct-Contributor%20Covenant%202.1-6a4c93?style=flat-square&labelColor=20232a)](https://github.com/dcondrey/.github/blob/main/.github/CODE_OF_CONDUCT.md) [![GitHub Sponsors](https://img.shields.io/badge/GitHub%20Sponsors-Sponsor-EA4AAA?style=flat-square&labelColor=20232a)](https://github.com/sponsors/dcondrey)
+<p align="center">
+  <a href="https://github.com/dcondrey/.github/actions/workflows/node-ci.yml"><img src="https://img.shields.io/github/actions/workflow/status/dcondrey/.github/node-ci.yml?style=flat-square&labelColor=20232a&branch=main&label=CI" alt="CI"></a>
+  <a href="https://github.com/dcondrey/.github/actions/workflows/codeql.yml"><img src="https://img.shields.io/github/actions/workflow/status/dcondrey/.github/codeql.yml?style=flat-square&labelColor=20232a&branch=main&label=CodeQL" alt="CodeQL"></a>
+  <a href=".bestpractices.json"><img src="https://img.shields.io/badge/best%20practices-evidence%20reviewed-6a4c93?style=flat-square&labelColor=20232a" alt="Best Practices Evidence"></a>
+  <a href="https://github.com/dcondrey/.github/blob/main/.github/CODE_OF_CONDUCT.md"><img src="https://img.shields.io/badge/code%20of%20conduct-Contributor%20Covenant%202.1-6a4c93?style=flat-square&labelColor=20232a" alt="Code of Conduct"></a>
+  <a href="https://github.com/sponsors/dcondrey"><img src="https://img.shields.io/badge/GitHub%20Sponsors-Sponsor-EA4AAA?style=flat-square&labelColor=20232a" alt="GitHub Sponsors"></a>
+</p>
 <!-- repo-header:end -->
+
+---
 
 Any repo without its own copy of these files inherits them from here:
 
